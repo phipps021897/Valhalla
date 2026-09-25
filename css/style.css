@@ -424,13 +424,16 @@ section[id]{ scroll-margin-top: 90px; }
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .coach-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow); }
-.coach-avatar{
-  width: 64px; height:64px; margin: 0 auto 18px;
+.coach-photo{
+  width: 120px; height:120px; margin: 0 auto 20px;
   border-radius: 50%;
-  display:flex; align-items:center; justify-content:center;
-  background: linear-gradient(135deg, var(--gold-bright), var(--red-bright));
-  font-family: var(--font-display); font-weight:700; font-size: 1.5rem; color:#1a1305;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--gold);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
+.coach-card:hover .coach-photo{ transform: scale(1.05); border-color: var(--gold-bright); }
 .coach-card h3{ font-family: var(--font-display); font-size: 1.15rem; margin: 0 0 6px; }
 .coach-role{ display:block; color: var(--gold-bright); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
 .coach-card p{ color: var(--text-muted); font-size: 0.98rem; margin:0; }

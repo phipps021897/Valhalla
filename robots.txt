@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://valhallaweymouth.co.uk/sitemap.xml
