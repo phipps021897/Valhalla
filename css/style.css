@@ -562,12 +562,30 @@ section[id]{ scroll-margin-top: 90px; }
 }
 
 @media (max-width: 640px){
-  /* This hero photo is a wide group shot; on tall/narrow phone
-     screens, background-size:cover only shows a ~24% vertical
-     slice of it if forced to fill the full viewport height.
-     Shortening the hero shows meaningfully more of the group. */
-  .hero{ min-height: 78svh; }
-  .hero-bg{ background-position: center 22%; transform: none; }
+  /* This hero photo is a wide ~20-person group shot. Overlaying
+     text on top of it full-bleed (like desktop) forces cropping
+     to whatever slice fits a tall phone viewport. Instead, show
+     the photo at its own natural shape (zero crop, zero letterbox
+     since the box aspect-ratio matches the image exactly) and flow
+     the heading/text below it rather than on top of it. */
+  .hero{
+    display: block;
+    min-height: 0;
+    overflow: visible;
+  }
+  .hero-bg{
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 1800 / 942;
+    background-position: center center;
+    transform: none;
+  }
+  .hero-overlay{
+    background: linear-gradient(to top, rgba(11,11,13,0.85) 0%, rgba(11,11,13,0) 30%);
+  }
+  .hero-logo-watermark, .scroll-cue{ display: none; }
+  .hero-inner{ padding-top: 32px; padding-bottom: 56px; }
 }
 
 /* ===================== Gallery page ===================== */
