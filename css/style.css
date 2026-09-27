@@ -199,9 +199,11 @@ section[id]{ scroll-margin-top: 90px; }
 }
 .hero-bg{
   position:absolute; inset:0;
-  background-size: cover; background-position: center 20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--bg);
   filter: grayscale(0.55) contrast(1.05);
-  transform: scale(1.05);
 }
 .hero-overlay{
   position:absolute; inset:0;
