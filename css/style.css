@@ -561,6 +561,15 @@ section[id]{ scroll-margin-top: 90px; }
   .price-row{ flex-direction:column; gap: 14px; }
 }
 
+@media (max-width: 640px){
+  /* This hero photo is a wide group shot; on tall/narrow phone
+     screens, background-size:cover only shows a ~24% vertical
+     slice of it if forced to fill the full viewport height.
+     Shortening the hero shows meaningfully more of the group. */
+  .hero{ min-height: 78svh; }
+  .hero-bg{ background-position: center 22%; transform: none; }
+}
+
 /* ===================== Gallery page ===================== */
 .page-hero{
   padding: 170px 0 60px;
