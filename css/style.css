@@ -586,6 +586,11 @@ section[id]{ scroll-margin-top: 90px; }
   }
   .hero-logo-watermark, .scroll-cue{ display: none; }
   .hero-inner{ padding-top: 32px; padding-bottom: 56px; }
+
+  /* Solid header bar instead of transparent-over-photo, since the
+     photo is no longer a full-bleed background behind it. */
+  .site-header{ background: rgb(11,11,13); padding: 14px 0; }
+  .hero{ padding-top: 72px; }
 }
 
 /* ===================== Gallery page ===================== */
